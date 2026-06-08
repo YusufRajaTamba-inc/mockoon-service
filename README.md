@@ -18,6 +18,26 @@ Kalau dependency belum ada, install dulu:
 npm install
 ```
 
+## Setup Docker Lokal
+
+Pastikan Docker Desktop sudah terbuka dan daemon-nya aktif. Setelah itu:
+
+```bash
+docker --version
+```
+
+Build image lokal:
+
+```bash
+npm run docker:build
+```
+
+Jalankan container:
+
+```bash
+npm run docker:start
+```
+
 ## Jalankan Mock API
 
 ```bash
@@ -70,3 +90,5 @@ Semua endpoint memakai prefix `/api`.
 ## Catatan
 
 Jika port `3002` sudah dipakai, ubah value `port` di [mockoon/environment.json](mockoon/environment.json) lalu sesuaikan juga URL aksesnya.
+
+Untuk Docker, port host juga harus diarahkan ke `3002`.
