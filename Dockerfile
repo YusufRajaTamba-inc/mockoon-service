@@ -6,6 +6,8 @@ WORKDIR /app
 
 COPY mockoon/environment.json /app/mockoon/environment.json
 
+ENV PORT=3002
+
 EXPOSE 3002
 
-ENTRYPOINT ["mockoon-cli", "start", "--data", "/app/mockoon/environment.json", "--disable-log-to-file"]
+ENTRYPOINT ["sh", "-c", "mockoon-cli start --data /app/mockoon/environment.json --disable-log-to-file --port ${PORT}"]
