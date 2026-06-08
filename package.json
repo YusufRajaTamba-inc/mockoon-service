@@ -1,0 +1,14 @@
+{
+  "name": "mockoon-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mockoon:start": "npx -y @mockoon/cli start --data mockoon/environment.json",
+    "mockoon:validate": "npx -y @mockoon/cli validate --data mockoon/environment.json"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

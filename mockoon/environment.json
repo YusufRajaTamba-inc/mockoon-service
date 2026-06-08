@@ -1,0 +1,237 @@
+{
+  "uuid": "ED481F21-3FDA-4320-9676-99D22325B846",
+  "name": "Mockoon Service",
+  "lastMigration": 33,
+  "endpointPrefix": "api",
+  "latency": 0,
+  "port": 3002,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "EAF06A79-C296-4B62-AC39-64A53400E668",
+      "documentation": "Health check endpoint.",
+      "method": "get",
+      "endpoint": "health",
+      "responses": [
+        {
+          "uuid": "A2F17B12-EC36-44E9-BE34-C3070F624421",
+          "body": "{\n  \"status\": \"ok\",\n  \"service\": \"mockoon-service\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "BAF6A180-2218-483B-9FAE-CC52941A521A",
+      "documentation": "List of users.",
+      "method": "get",
+      "endpoint": "users",
+      "responses": [
+        {
+          "uuid": "A664C9DC-1510-4212-8984-A2C94A6ECB95",
+          "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Alya Putri\",\n    \"email\": \"alya@example.com\",\n    \"role\": \"admin\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Bima Pratama\",\n    \"email\": \"bima@example.com\",\n    \"role\": \"member\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "4ADC4A48-FCCC-4DD9-A5AE-2E4E2A7E1F7A",
+      "documentation": "Single user detail.",
+      "method": "get",
+      "endpoint": "users/1",
+      "responses": [
+        {
+          "uuid": "30ACB985-82BF-4A81-BF82-29DCA99126D7",
+          "body": "{\n  \"id\": 1,\n  \"name\": \"Alya Putri\",\n  \"email\": \"alya@example.com\",\n  \"role\": \"admin\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "8A7C3B9E-26C7-4571-8B48-A68D0A393757",
+      "documentation": "Login endpoint.",
+      "method": "post",
+      "endpoint": "auth/login",
+      "responses": [
+        {
+          "uuid": "72DF1EB4-D8C1-42C9-802F-37F5A6ED3833",
+          "body": "{\n  \"accessToken\": \"mock-token\",\n  \"tokenType\": \"Bearer\",\n  \"expiresIn\": 3600\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "2113E179-DD7B-44AF-9FA5-BFF0774A432E",
+      "documentation": "Product list.",
+      "method": "get",
+      "endpoint": "products",
+      "responses": [
+        {
+          "uuid": "7BB153F3-9B8D-44F5-AD59-40E9EBA747D4",
+          "body": "[\n  {\n    \"id\": 1001,\n    \"name\": \"Mock Laptop\",\n    \"price\": 14990000,\n    \"currency\": \"IDR\"\n  },\n  {\n    \"id\": 1002,\n    \"name\": \"Mock Headphones\",\n    \"price\": 799000,\n    \"currency\": \"IDR\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [],
+  "proxyResHeaders": [],
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "data": [],
+  "folders": [],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "EAF06A79-C296-4B62-AC39-64A53400E668"
+    },
+    {
+      "type": "route",
+      "uuid": "BAF6A180-2218-483B-9FAE-CC52941A521A"
+    },
+    {
+      "type": "route",
+      "uuid": "4ADC4A48-FCCC-4DD9-A5AE-2E4E2A7E1F7A"
+    },
+    {
+      "type": "route",
+      "uuid": "8A7C3B9E-26C7-4571-8B48-A68D0A393757"
+    },
+    {
+      "type": "route",
+      "uuid": "2113E179-DD7B-44AF-9FA5-BFF0774A432E"
+    }
+  ],
+  "callbacks": []
+}
