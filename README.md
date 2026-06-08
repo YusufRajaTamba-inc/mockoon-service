@@ -38,6 +38,31 @@ Jalankan container:
 npm run docker:start
 ```
 
+## Deploy ke Cloud Tanpa Docker (Render Free)
+
+Bisa deploy tanpa Docker dengan mode Native Node di Render.
+
+1. New + -> Web Service
+2. Pilih repo ini
+3. Environment: Node
+4. Build Command: npm install
+5. Start Command: npm run cloud:start
+6. Health Check Path: /api/health
+7. Deploy
+
+Render akan inject PORT otomatis, dan service ini akan memakainya dari script cloud:start.
+
+## Deployment Production (Railway)
+
+Service ini sudah dideploy ke Railway dan bisa diakses lewat URL berikut:
+
+- Base URL: https://mockoon-service-production.up.railway.app
+- Health Check: https://mockoon-service-production.up.railway.app/api/health
+
+Contoh cek cepat:
+
+curl https://mockoon-service-production.up.railway.app/api/health
+
 ## Jalankan Mock API
 
 ```bash

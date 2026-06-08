@@ -6,6 +6,7 @@
   "scripts": {
     "mockoon:start": "npx -y @mockoon/cli start --data mockoon/environment.json",
     "mockoon:validate": "npx -y @mockoon/cli validate --data mockoon/environment.json",
+    "cloud:start": "npx -y @mockoon/cli start --data mockoon/environment.json --disable-log-to-file --port ${PORT:-3002}",
     "docker:build": "docker build -t mockoon-service .",
     "docker:start": "docker run --rm -p 3002:3002 mockoon-service"
   },
